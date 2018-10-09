@@ -1,0 +1,12 @@
+site_name: reBOOT LAN FAQ
+theme:
+  name: 'material'
+  palette:
+    primary: 'red'
+    accent: 'light blue'
+
+dev_addr: 192.168.1.8:8000
+pages:
+    - Useful Info: index.md
+    - Game Files: files.md
+
