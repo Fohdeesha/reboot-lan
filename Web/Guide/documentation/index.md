@@ -3,9 +3,9 @@
 ## Parking And Unloading/Loading
 All attendees and staff are to park behind the mall in the area outlined in the picture below. For unloading your PC equipment, you can temporarily park by the door as indicated in the picture, but do not leave cars here for more than a couple minutes! Once you are done unloading your gear, please return to your car and park it in the main lot.
 
-![parking1](../store/parking1.png)
+![parking1](store/parking1.jpg)
 
-![parking 2](../store/parking2.png)
+![parking 2](store/parking2.jpg)
 
 
 ## Network
