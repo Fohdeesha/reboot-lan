@@ -5,6 +5,8 @@ All attendees and staff are to park behind the mall in the area outlined in the 
 
 ![parking1](store/parking1.jpg)
 
+### Zoomed In: 
+
 ![parking 2](store/parking2.jpg)
 
 
