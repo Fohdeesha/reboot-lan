@@ -1,5 +1,5 @@
 # reBOOT LAN Internal Info
-Wondering about parking, plugging in power/network, food, etc? 
+Wondering about parking, plugging in power/network, food, etc?   
 
 For those items, refer to the main FAQ - [reBOOT FAQ](http://rebootlan.com/guide/)
 
@@ -13,20 +13,20 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 
 
 ## Game Servers
-**`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**
-**`csgo.reboot.com` - reBOOT CS:GO**
-**`ut99.reboot.com` - reBOOT UT99-GOTY**
+**`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**  
+**`csgo.reboot.com` - reBOOT CS:GO**  
+**`ut99.reboot.com` - reBOOT UT99-GOTY**  
 
 ## Game Files
-UT99 is hard to get running smoothly on modern Windows, so linked below is a ready to go portable copy of UT99-GOTY that works perfectly!
+UT99 is hard to get running smoothly on modern Windows, so linked below is a ready to go portable copy of UT99-GOTY that works perfectly!  
 
-[UT99-GOTY.zip](reboot.com/files/UT99-GOTY.zip)
+[UT99-GOTY.zip](reboot.com/files/UT99-GOTY.zip)  
 
 ## WIFI
-There is free WIFI available for mobile devices (phones). It is speed limited to conserve bandwidth, so please refrain from using it on your gaming desktop/laptop - plug those into a switch!
+There is free WIFI available for mobile devices (phones). It is speed limited to conserve bandwidth, so please refrain from using it on your gaming desktop/laptop - plug those into a switch!  
 
-**SSID: reBOOT WIFI
-PW: reboot2k18**
+**SSID: reBOOT WIFI**  
+**PW: reboot2k18**  
 
 
 ## Network Info

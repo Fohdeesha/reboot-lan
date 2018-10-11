@@ -2,8 +2,8 @@ site_name: reBOOT LAN Internal
 theme:
   name: 'material'
   palette:
-    primary: 'red'
-    accent: 'light blue'
+    primary: 'blue'
+    accent: 'red'
 
 dev_addr: 192.168.1.8:8000
 pages:
