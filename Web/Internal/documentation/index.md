@@ -20,7 +20,7 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 ## Game Files
 UT99 is hard to get running smoothly on modern Windows, so linked below is a ready to go portable copy of UT99-GOTY that works perfectly!  
 
-[UT99-GOTY.zip](reboot.com/files/UT99-GOTY.zip)  
+[UT99-GOTY.zip](/files/UT99-GOTY.zip)  
 
 ## WIFI
 There is free WIFI available for mobile devices (phones). It is speed limited to conserve bandwidth, so please refrain from using it on your gaming desktop/laptop - plug those into a switch!  
