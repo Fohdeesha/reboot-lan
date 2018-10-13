@@ -51,7 +51,7 @@ Outside food & drink are allowed. If you are responsible, you can bring alcohol 
 
 ## Windows 10 File Sharing
 
-one of the staples of a LAN party is sharing files. Sadly Windows 10 disabled the ability to access guest shares (no passwords) on other computers. This means you will not be able to browse other user's shared files, even though they have shared them and allowed anyone to access them.  
+One of the staples of a LAN party is sharing files. Sadly Windows 10 disabled the ability to access guest shares (no passwords) on other computers. This means you will not be able to browse other user's shared files, even though they have shared them and allowed anyone to access them.  
 
 Thankfully to fix this, all you need to do is re-enable guest share access by following the below.
 
