@@ -22,7 +22,7 @@ Please bring an ethernet cable - the closer to 15ft or longer the better (but no
 
 ![switch1](store/switch1.jpg)
 
-For attendees who want 10gbE ports: if you have a copper/RJ45 10gbE port, plug into one of the RJ45 modules that look like a bigger port sticking out (these are 10gbE modules): 
+For attendees who have 10gbE ports: if you have a copper/RJ45 10gbE port, plug into one of the RJ45 modules that look like a bigger port sticking out (these are 10gbE modules): 
 
 ![switch2](store/switch2.jpg)
 
@@ -43,8 +43,9 @@ If you need to sleep or take a nap, there will be an area to lay out sleeping ba
 ## Food Options
 Outside food & drink are allowed. If you are responsible, you can bring alcohol into the venue after 9PM (you will be carded). We will also be selling the following during the event:
 
-**Bawls (Regular, Cherry, Orange, Sugar Free) - $2**  
-**Assorted Candy (Reeses, Eminem's, ETC)  - $1**
+**Bawls (Regular, Cherry, Orange, Sugar Free) - $2.00**  
+**Assorted Candy (Reeses, M&M's, ETC)  - $1.50**
+**Bottled Water & Soda - $1.00**
 
 **Cumberland Grill**, who is also located in the mall, will be catering the event late into the night (maybe even the whole 24 hours). Call them @ **317-929-1833** to place your order, and they will bring it to the LAN event hall for you. The best way to describe them is similar to Five Guys burgers. You can view their menu [here.](store/menu)
 
