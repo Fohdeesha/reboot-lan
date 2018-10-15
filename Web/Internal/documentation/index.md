@@ -32,7 +32,7 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 
 [Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)  
 
-(Netdata](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
+[Netdata](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
 
 [DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)  
 
