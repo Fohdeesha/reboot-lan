@@ -4,7 +4,6 @@ Wondering about parking, plugging in power/network, food, etc?
 For those items, refer to the main FAQ - [reBOOT FAQ](http://rebootlan.com/guide/)
 
 
-
 ## reBOOT Discord
 Want to chat with other attendees, organize games, or ask staff for help? Use the Discord!
 
@@ -31,11 +30,11 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 
 ## Network Info
 
-Graphs
+[Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)  
 
-DHCP Leases
+(Netdata](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
 
-Netdata
+[DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)  
 
 ## Windows 10 File Sharing
 
