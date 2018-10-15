@@ -30,11 +30,15 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 
 ## Network Info
 
-[Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)  
+[Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)   
 
-[Netdata](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
+[DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)   
 
-[DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)  
+[Netdata (Web Server)](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
+
+[Netdata (Game Server)](http://reboot.com/netdata/host/Game%20Server/#menu_system;theme=slate;help=true)  
+
+[Netdata (Steam Cache)](http://reboot.com/netdata/host/Steam%20Cache/#;theme=slate;help=true)  
 
 ## Windows 10 File Sharing
 
