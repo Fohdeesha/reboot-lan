@@ -4,6 +4,9 @@
 ## Discord!
 We highly recommend jumping in the official reBOOT LAN Discord server - this is the quickest way to get in touch with other attendees, staff members, organize games and find tournament teams, etc. [Click here!](https://discord.gg/KrjuCKH)
 
+## Admission
+Don't worry about printing any tickets you received via email, you don't need to bring anything to be admitted. You will just need to present your name and we will check that you're a registered attendee. That's it!
+
 ## Parking And Unloading/Loading
 All attendees and staff are to park behind the mall in the area outlined in the picture below. For unloading your PC equipment, you can temporarily park by the door as indicated in the picture, but do not leave cars here for more than a couple minutes! Once you are done unloading your gear, please return to your car and park it in the main lot.
 
