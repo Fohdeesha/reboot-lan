@@ -40,6 +40,12 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 
 [Netdata (Steam Cache)](http://reboot.com/netdata/host/Steam%20Cache/#;theme=slate;help=true)  
 
+## Shared Files
+
+One of the best things about LAN parties is sharing files. Browse the network, or here's a starting point: copy the below into your file explorer address bar (not an internet browser):  
+
+`\\172.16.210.7\Media`  
+
 ## Windows 10 File Sharing
 
 Windows 10 disabled the ability to access guest shares (no passwords) on other computers. This means you will not be able to browse other user's shared files, even though they have shared them and allowed anyone to access them.  
