@@ -39,11 +39,13 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 
 [DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)   
 
-[Netdata (Web Server)](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
+[Netdata (Firewall)](http://reboot.com/netdata/host/Firewall/#menu_system;theme=slate;help=true)  
 
 [Netdata (Game Server)](http://reboot.com/netdata/host/Game%20Server/#menu_system;theme=slate;help=true)  
 
 [Netdata (Steam Cache)](http://reboot.com/netdata/host/Steam%20Cache/#;theme=slate;help=true)  
+
+[Netdata (Web Server)](http://reboot.com/netdata/#menu_system;theme=slate;help=true)  
 
 ## Shared Files
 
