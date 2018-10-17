@@ -3,6 +3,8 @@ Wondering about parking, plugging in power/network, food, etc?
 
 For those items, refer to the main FAQ - [reBOOT FAQ](http://rebootlan.com/guide/)
 
+**Turn your torrent clients off!**  
+
 
 ## reBOOT Discord
 Want to chat with other attendees, organize games, or ask staff for help? Use the Discord!
@@ -31,6 +33,8 @@ There is free WIFI available for mobile devices (phones). It is speed limited to
 ## Network Info
 
 [Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)   
+
+[NTOP-NG](http://ntop.reboot.com/lua/as_stats.lua)  (guest / reboot37)  
 
 [DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)   
 
