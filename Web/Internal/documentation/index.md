@@ -16,6 +16,7 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 ## Game Servers
 **`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**  
 **`csgo.reboot.com` - reBOOT CS:GO**  
+**`tf2.reboot.com` - reBOOT TF2*  
 **`ut99.reboot.com` - reBOOT UT99-GOTY**  
 
 ## Game Files
