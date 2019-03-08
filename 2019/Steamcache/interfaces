@@ -1,0 +1,19 @@
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# MGMT VRF
+allow-hotplug eth0
+iface eth0 inet static
+        address 172.16.205.12/24
+        post-up ip route add 172.16.251.0/24 via 172.16.205.1
+        post-up ip route add 172.16.252.0/24 via 172.16.205.1
+
+		
+# PUBLIC LAN
+allow-hotplug eth1
+iface eth1 inet static
+        address 172.16.210.5/24
+        gateway 172.16.210.1

@@ -1,0 +1,34 @@
+"Commands"
+{
+	"Game Modes"
+	{
+		"5v5 Competitive"
+		{
+			"cmd"			"exec 5v5comp"
+			"execute"		"server"
+
+
+		}
+		"Knife Only - Team Decider"
+		{
+			"cmd"			"exec knivez"
+			"execute"		"server"
+
+
+		}
+		"Tie-Break Mode"
+		{
+			"cmd"			"exec tie"
+			"execute"		"server"
+
+
+		}
+		"Pistols Only"
+		{
+			"cmd"			"exec pistols"
+			"execute"		"server"
+
+
+		}
+	}
+}
