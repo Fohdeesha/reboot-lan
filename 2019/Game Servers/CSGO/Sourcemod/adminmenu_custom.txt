@@ -23,9 +23,16 @@
 
 
 		}
-		"Pistols Only"
+		"Kill Warmup Time"
 		{
-			"cmd"			"exec pistols"
+			"cmd"			"mp_warmuptime 0"
+			"execute"		"server"
+
+
+		}
+		"Extend Warmup"
+		{
+			"cmd"			"mp_warmuptime 1000"
 			"execute"		"server"
 
 
