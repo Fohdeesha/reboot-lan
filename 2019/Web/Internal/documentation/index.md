@@ -1,3 +1,4 @@
+
 # reBOOT LAN Internal Info
 Wondering about parking, plugging in power/network, food, etc?   
 
@@ -14,10 +15,13 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 
 
 ## Game Servers
-**`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**  
-**`csgo.reboot.com` - reBOOT CS:GO**  
-**`tf2.reboot.com` - reBOOT TF2*  
+**`csgo.reboot.com` - reBOOT CS:GO  #1**  
+**`csgo2.reboot.com` - reBOOT CS:GO  #2**  
+**`csgo3.reboot.com` - reBOOT CS:GO  #3 (tournament use only)**  
+**`csgo4.reboot.com` - reBOOT CS:GO  #4 (tournament use only)**  
+**`tf2.reboot.com` - reBOOT TF2**  
 **`ut99.reboot.com` - reBOOT UT99-GOTY**  
+**`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**  
 
 ## Game Files
 UT99 is hard to get running smoothly on modern Windows, so linked below is a ready to go portable copy of UT99-GOTY that works perfectly!  
