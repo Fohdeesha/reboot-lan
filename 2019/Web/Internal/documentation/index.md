@@ -1,4 +1,3 @@
-
 # reBOOT LAN Internal Info
 Wondering about parking, plugging in power/network, food, etc?   
 
@@ -29,7 +28,7 @@ UT99 is hard to get running smoothly on modern Windows, so linked below is a rea
 [UT99-GOTY.zip](/files/UT99-GOTY.zip)  
 
 ## WIFI
-There is free WIFI available for mobile devices (phones). It is speed limited to conserve bandwidth, so please refrain from using it on your gaming desktop/laptop - plug those into a switch!  
+There is free WIFI available if your phone, laptop, or game console needs it (although you should try and use a wired ethernet cable for those). It is speed limited to reasonable speeds, so if you want super fast connections please use the wired ethernet jack under your cubicle.  
 
 **SSID: reBOOT WIFI**  
 **PW: reboot2k18**  
