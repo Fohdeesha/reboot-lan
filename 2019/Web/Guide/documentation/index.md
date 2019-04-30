@@ -1,3 +1,4 @@
+
 # reBOOT LAN Party 2019 Helpful Tips
 
 ## Discord!
@@ -15,6 +16,11 @@ All attendees and staff are free to park anywhere within the main campus outline
 
 ![parking 2](store/parking2.jpg)
 
+## Food Options
+Outside food & drink are allowed. There will also be a concessions vendor on site selling drinks and snacks.  
+
+[Fast Track Indy](https://www.fasttrackindy.com/), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available. To receive free delivery, use the discount code **REBOOTLAN** during checkout.
+
 ## Games & Updates!
 To avoid having to perform large downloads at the event, please do your best to have all the games you wish to play installed and updated prior to attending. Please ensure your Windows is up to date as well. Games you might want to have installed that were popular last year are Rocket League, CS:GO, HL2:DM, TF2, UT99, Unreal Tournament, etc.
 
@@ -30,11 +36,6 @@ Tables +  chairs will be provided. However if you want to bring your own chair y
 
 ## Sleeping
 If you need to sleep or take a nap, there will be a separate room to lay out sleeping bags and pillows and get some rest. 
-
-## Food Options
-Outside food & drink are allowed. There will also be a concessions vendor on site selling drinks and snacks.  
-
-[Fast Track Indy](https://www.fasttrackindy.com/), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available.
 
 ## Windows 10 File Sharing
 
