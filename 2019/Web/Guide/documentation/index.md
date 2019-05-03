@@ -1,4 +1,3 @@
-
 # reBOOT LAN Party 2019 Helpful Tips
 
 ## Discord!
@@ -17,7 +16,7 @@ All attendees and staff are free to park anywhere within the main campus outline
 ![parking 2](store/parking2.jpg)
 
 ## Food Options
-Outside food & drink are allowed. There will also be a concessions vendor on site selling drinks and snacks.  
+Outside food & drink are allowed. [Gaming 2 Give](https://www.gaming2give.org/) will also be selling concessions (food & drink) on-site, with all proceeds going to their charity.
 
 [Fast Track Indy](https://www.fasttrackindy.com/), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available. To receive free delivery, use the discount code **REBOOTLAN** during checkout.
 
@@ -26,7 +25,7 @@ To avoid having to perform large downloads at the event, please do your best to 
 
 
 ## Setting up - Network & Power
-Being a LAN party, each attendee is expected to bring their own PC or console setup including monitors/TVs. Please bring an ethernet cable as well. Each attendee gets their own cubicle - power outlets and a network jack is available under each cubicle for your use. Multiple monitors are welcome.  
+Being a LAN party, each attendee is expected to bring their own PC or console setup including monitors/TVs. Please bring an ethernet cable and a power strip as well. Each attendee gets their own cubicle - power outlets and a network jack is available under each cubicle for your use. Multiple monitors are welcome.  
 
 If you have special requirements, such as wanting a 10gbE connection, or bringing a server, just find a staff member and they will get you set up.  
 
