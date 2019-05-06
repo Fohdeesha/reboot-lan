@@ -36,7 +36,7 @@ There is free WIFI available if your phone, laptop, or game console needs it (al
 
 ## Network Info
 
-[Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1)   
+[Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1&kiosk)   
 
 [NTOP-NG](http://ntop.reboot.com/lua/as_stats.lua)  (guest / reboot37)  
 
