@@ -12,7 +12,7 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 
 [![Discord](discord.png)](https://discord.gg/KrjuCKH)
 
-**Note:** If you haven't registered your team for a tournament, and would like to do so, use [This Link.]([https://rebootlan.challonge.com/tournaments](https://rebootlan.challonge.com/tournaments))  - Only the team captain needs to register their team.
+**Note:** If you haven't registered your team for a tournament, and would like to do so, use [This Link.](https://rebootlan.challonge.com/tournaments)  - Only the team captain needs to register their team.
 
 
 ## Game Servers
