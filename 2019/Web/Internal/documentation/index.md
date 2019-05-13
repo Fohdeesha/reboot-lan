@@ -16,6 +16,7 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 
 
 ## Game Servers
+**`retakes.reboot.com` - reBOOT CS:GO Retakes**  
 **`csgo.reboot.com` - reBOOT CS:GO  #1**  
 **`csgo2.reboot.com` - reBOOT CS:GO  #2**  
 **`csgo3.reboot.com` - reBOOT CS:GO  #3 (tournament use only)**  
