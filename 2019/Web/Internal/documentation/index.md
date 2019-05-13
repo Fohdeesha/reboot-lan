@@ -33,8 +33,8 @@ UT99 is hard to get running smoothly on modern Windows, so linked below is a rea
 ## WIFI
 There is free WIFI available if your phone, laptop, or game console needs it (although you should try and use a wired ethernet cable for those). It is speed limited to reasonable speeds, so if you want super fast connections please use the wired ethernet jack under your cubicle.  
 
-**SSID: reBOOT WIFI**  
-**PW: reboot2k18**  
+**Name: reBOOT WIFI**  
+**Password: reboot2k18**  
 
 
 ## Network Info
