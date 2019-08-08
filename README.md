@@ -1,9 +1,9 @@
 
 # reboot-lan
-Planning + Infra for reBOOT LAN Party  
+Planning + Infrastructure for reBOOT LAN Party  
 
 
-[reBOOT LAN](https://rebootlan.com/)  
+[reBOOT LAN Official Website](https://rebootlan.com/)  
 
 ![alt text](https://i.imgur.com/wV8Hise.jpg)  
 
