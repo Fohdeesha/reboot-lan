@@ -1,0 +1,1 @@
+Color DMXTest "Strip #1" { channel="dmx:color:AN2:rgb:color" }
