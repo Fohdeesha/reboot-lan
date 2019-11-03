@@ -2,7 +2,7 @@
 // OPPSK Strips are 5 Channel
 // Device Starting Address is Strip # Multiplied x 10
 
-Bridge dmx:artnet-bridge:AN2 [ address="192.168.1.43", universe=0, refreshrate=40 ] {
+Bridge dmx:artnet-bridge:AN2 [ address="192.168.1.43", universe=0, refreshrate=20 ] {
 
  dimmer STRIP1MD  [dmxid="10", turnonvalue="215", turnoffvalue="0" ]
  color  STRIP1    [dmxid="11/3", fadetime=500, dimtime=500 ]
