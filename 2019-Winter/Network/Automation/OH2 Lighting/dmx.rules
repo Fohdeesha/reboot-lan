@@ -1,0 +1,8 @@
+
+// Put ColorStrip Mini Into RGB Mode
+        rule "Put Strip 1 Into RGB Mode"
+        when
+            Item STRIP_1 received command
+        then
+            STRIP_1_MODE.sendCommand(ON)
+        end

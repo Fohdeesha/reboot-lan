@@ -1,1 +1,5 @@
-Color DMXTest "Strip #1" { channel="dmx:color:AN2:rgb:color" }
+Switch STRIP_1_MODE "Strip #1 Mode" { channel="dmx:dimmer:AN2:STRIP1MD:brightness" }
+
+Color STRIP_1 "Strip #1" { channel="dmx:color:AN2:STRIP1:color" }
+
+Color STRIP_2 "Strip #2" { channel="dmx:color:AN2:STRIP2:color" }
