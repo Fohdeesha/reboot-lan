@@ -17,13 +17,14 @@ Want to chat with other attendees, organize games, or ask staff for help? Use th
 
 ## Game Servers
 **`retakes.reboot.com` - reBOOT CS:GO Retakes**  
-**`csgo.reboot.com` - reBOOT CS:GO  #1**  
-**`csgo2.reboot.com` - reBOOT CS:GO  #2**  
+**`csgo.reboot.com` - reBOOT CS:GO  #1 (tournament use only)**  
+**`csgo2.reboot.com` - reBOOT CS:GO  #2 (tournament use only)**  
 **`csgo3.reboot.com` - reBOOT CS:GO  #3 (tournament use only)**  
 **`csgo4.reboot.com` - reBOOT CS:GO  #4 (tournament use only)**  
+**`hl2dm.reboot.com` - reBOOT HL2:DM**  
 **`tf2.reboot.com` - reBOOT TF2**  
 **`ut99.reboot.com` - reBOOT UT99-GOTY**  
-**`ut.reboot.com` - reBOOT Unreal  Tournament (UT4)**  
+
 
 ## Game Files
 UT99 is hard to get running smoothly on modern Windows, so linked below is a ready to go portable copy of UT99-GOTY that works perfectly!  
@@ -36,18 +37,17 @@ There is free WIFI available if your phone, laptop, or game console needs it (al
 **Name: reBOOT WIFI**  
 **Password: reboot2k18**  
 
-
 ## Network Info
 
 [Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1&kiosk=tv)   
-
-[NTOP-NG](http://ntop.reboot.com/lua/as_stats.lua)  (guest / reboot37)  
 
 [DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)   
 
 [Netdata (Firewall)](http://reboot.com/netdata/host/Firewall/#menu_system;theme=slate;help=true)  
 
-[Netdata (Game Server)](http://reboot.com/netdata/host/Game%20Server/#menu_system;theme=slate;help=true)  
+[Netdata (Game Server 1)](http://reboot.com/netdata/host/Game-Server-1/#menu_system;theme=slate;help=true)  
+
+[Netdata (Game Server 2)](http://reboot.com/netdata/host/Game-Server-2/#menu_system;theme=slate;help=true)  
 
 [Netdata (Steam Cache)](http://reboot.com/netdata/host/Steam%20Cache/#;theme=slate;help=true)  
 
