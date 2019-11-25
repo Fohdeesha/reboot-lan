@@ -39,6 +39,8 @@ There is free WIFI available if your phone, laptop, or game console needs it (al
 
 ## Network Info
 
+[Video Feed](https://rebootlan.com/live/)   
+
 [Graphs](http://graphs.reboot.com:3000/d/q597Dw1ik/reboot-lan?refresh=1m&orgId=1&kiosk=tv)   
 
 [DHCP Leases](http://dhcp.reboot.com/dhcp_statistics)   
