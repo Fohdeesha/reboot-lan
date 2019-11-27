@@ -3,3 +3,13 @@ Switch STRIP_1_MODE "Strip #1 Mode" { channel="dmx:dimmer:AN2:STRIP1MD:brightnes
 Color STRIP_1 "Strip #1" { channel="dmx:color:AN2:STRIP1:color" }
 
 Color STRIP_2 "Strip #2" { channel="dmx:color:AN2:STRIP2:color" }
+
+Color STRIP_3 "Strip #3" { channel="dmx:color:AN2:STRIP3:color" }
+
+Color STRIP_4 "Strip #4" { channel="dmx:color:AN2:STRIP4:color" }
+
+Color STRIP_5 "Strip #5" { channel="dmx:color:AN2:STRIP5:color" }
+
+Color STRIP_6 "Strip #6" { channel="dmx:color:AN2:STRIP6:color" }
+
+Color STRIP_7 "Strip #7" { channel="dmx:color:AN2:STRIP7:color" }

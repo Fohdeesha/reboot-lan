@@ -7,4 +7,9 @@ Bridge dmx:artnet-bridge:AN2 [ address="172.16.205.22", universe=0, refreshrate=
  dimmer STRIP1MD  [dmxid="10", turnonvalue="211", turnoffvalue="0" ]
  color  STRIP1    [dmxid="11/3", fadetime=500, dimtime=500 ]
  color  STRIP2    [dmxid="20/3", fadetime=500, dimtime=500 ]
+ color  STRIP3    [dmxid="30/3", fadetime=500, dimtime=500 ]
+ color  STRIP4    [dmxid="40/3", fadetime=500, dimtime=500 ]
+ color  STRIP5    [dmxid="50/3", fadetime=500, dimtime=500 ]
+ color  STRIP6    [dmxid="60/3", fadetime=500, dimtime=500 ]
+ color  STRIP7    [dmxid="70/3", fadetime=500, dimtime=500 ]
 }
