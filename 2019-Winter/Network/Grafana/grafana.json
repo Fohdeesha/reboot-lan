@@ -27,11 +27,12 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
+      "datasource": null,
       "decimals": 0,
       "description": "",
       "format": "Mbits",
       "gauge": {
-        "maxValue": 120,
+        "maxValue": 1000,
         "minValue": 0,
         "show": true,
         "thresholdLabels": false,
@@ -60,6 +61,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -94,30 +96,50 @@
               "type": "fill"
             }
           ],
+          "hide": false,
+          "measurement": "ports",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT last(\"ifInOctets_rate\") * 8 /1000000 FROM \"ports\" WHERE (\"hostname\" = 'lab-wan-agg-fcx.mfi.lab' AND \"ifName\" = 'ethernet1/1/1') AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
+          "query": "SELECT last(\"ifInOctets_rate\") FROM \"ports\" WHERE (\"hostname\" = 'lab-fcx-stk.mfi.lab' AND \"ifName\" = 'ethernet1/1/1') AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "value"
+                  "ifInOctets_rate"
                 ],
                 "type": "field"
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
+              },
+              {
+                "params": [
+                  "* 8 /1000000"
+                ],
+                "type": "math"
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "lab-upstairs-6610.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "ifName",
+              "operator": "=",
+              "value": "ethernet1/1/1"
+            }
+          ]
         }
       ],
-      "thresholds": "80,100",
+      "thresholds": "650,800",
       "title": "WAN Download",
       "type": "singlestat",
       "valueFontSize": "50%",
@@ -139,11 +161,12 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
+      "datasource": null,
       "decimals": 0,
       "description": "",
       "format": "Mbits",
       "gauge": {
-        "maxValue": 25,
+        "maxValue": 35,
         "minValue": 0,
         "show": true,
         "thresholdLabels": false,
@@ -172,6 +195,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -206,30 +230,49 @@
               "type": "fill"
             }
           ],
+          "measurement": "ports",
           "orderByTime": "ASC",
           "policy": "default",
           "query": "SELECT last(\"ifOutOctets_rate\") * 8 /1000000 FROM \"ports\" WHERE (\"hostname\" = 'lab-wan-agg-fcx.mfi.lab' AND \"ifName\" = 'ethernet1/1/1') AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
             [
               {
                 "params": [
-                  "value"
+                  "ifOutOctets_rate"
                 ],
                 "type": "field"
               },
               {
                 "params": [],
-                "type": "mean"
+                "type": "last"
+              },
+              {
+                "params": [
+                  "* 8 /1000000"
+                ],
+                "type": "math"
               }
             ]
           ],
-          "tags": []
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "lab-upstairs-6610.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "ifName",
+              "operator": "=",
+              "value": "ethernet1/1/1"
+            }
+          ]
         }
       ],
-      "thresholds": "15,20",
+      "thresholds": "25,35",
       "title": "WAN Upload",
       "type": "singlestat",
       "valueFontSize": "50%",
@@ -243,9 +286,10 @@
       "valueName": "current"
     },
     {
-      "content": "<center>\r\n  <font size=\"+3\">For This & Food/WIFI Info \r\n  <br>\r\n  Please Visit - <a href=\"http://reboot.com/\">reboot.com</a>\r\n  </font>\r\n</center>",
+      "content": "<center>\r\n  <font size=\"+3\">Food/WIFI/Games Info - <a href=\"http://reboot.com/\">reboot.com</a>\r\n  </font>\r\n</center>",
+      "datasource": null,
       "gridPos": {
-        "h": 6,
+        "h": 3,
         "w": 8,
         "x": 8,
         "y": 0
@@ -253,6 +297,7 @@
       "id": 11,
       "links": [],
       "mode": "html",
+      "options": {},
       "title": "Info",
       "type": "text"
     },
@@ -265,6 +310,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
+      "datasource": null,
       "decimals": 0,
       "description": "",
       "format": "percent",
@@ -298,6 +344,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -391,6 +438,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
+      "datasource": null,
       "decimals": 0,
       "description": "",
       "format": "percent",
@@ -424,6 +472,7 @@
       "maxDataPoints": 100,
       "nullPointMode": "connected",
       "nullText": null,
+      "options": {},
       "postfix": "",
       "postfixFontSize": "50%",
       "prefix": "",
@@ -509,6 +558,256 @@
       "valueName": "current"
     },
     {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#E02F44",
+        "#E02F44",
+        "#E02F44"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 3
+      },
+      "id": 19,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "Total Devices:",
+      "prefixFontSize": "80%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "app",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "dhcp_active"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "app_id",
+              "operator": "=",
+              "value": "1"
+            },
+            {
+              "condition": "AND",
+              "key": "hostname",
+              "operator": "=",
+              "value": "dhcp.mfi.lab"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#1F60C4",
+        "#1F60C4",
+        "#1F60C4"
+      ],
+      "datasource": null,
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 3
+      },
+      "id": 20,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "options": {},
+      "postfix": "",
+      "postfixFontSize": "30%",
+      "prefix": "Wireless Devices:",
+      "prefixFontSize": "80%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "wireless-sensor",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "sensor"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "ap.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "sensor_class",
+              "operator": "=",
+              "value": "clients"
+            }
+          ]
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
       "aliasColors": {
         "Download Activity": "#70dbed",
         "Upload Activity": "#ea6460"
@@ -516,14 +815,17 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 1,
       "fill": 3,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
         "y": 6
       },
+      "hiddenSeries": false,
       "id": 4,
       "legend": {
         "alignAsTable": true,
@@ -539,6 +841,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -593,7 +898,7 @@
             {
               "key": "hostname",
               "operator": "=",
-              "value": "lab-wan-agg-fcx.mfi.lab"
+              "value": "lab-upstairs-6610.mfi.lab"
             },
             {
               "condition": "AND",
@@ -648,7 +953,7 @@
             {
               "key": "hostname",
               "operator": "=",
-              "value": "lab-wan-agg-fcx.mfi.lab"
+              "value": "lab-upstairs-6610.mfi.lab"
             },
             {
               "condition": "AND",
@@ -703,21 +1008,24 @@
     {
       "aliasColors": {
         "Firewall Load": "#ea6460",
-        "Firewall Load (pfsense.mfi.lab)": "#e24d42",
+        "Firewall Load (pfsense.mfi.lab)": "light-yellow",
         "Server Load (xen-01.mfi.lab)": "#5195ce",
         "ucd_load.last": "#ea6460"
       },
       "bars": true,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 0,
       "fill": 0,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
         "y": 13
       },
+      "hiddenSeries": false,
       "id": 14,
       "legend": {
         "alignAsTable": true,
@@ -734,6 +1042,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -792,9 +1103,155 @@
               "value": "hr"
             }
           ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Firewall CPU Load",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "percent",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
         },
         {
-          "alias": "Server Load (xen-01.mfi.lab)",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Firewall Load": "#ea6460",
+        "Firewall Load (pfsense.mfi.lab)": "#e24d42",
+        "Hypervisor #1 Load": "semi-dark-red",
+        "Hypervisor #1 Load (XEN-01)": "semi-dark-red",
+        "Hypervisor #2 Load": "semi-dark-blue",
+        "Hypervisor #2 Load (XEN-02)": "semi-dark-blue",
+        "Server Load (xen-01.mfi.lab)": "#5195ce",
+        "ucd_load.last": "#ea6460"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 0,
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 23,
+      "interval": "",
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 4,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Hypervisor #1 Load (XEN-01)",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "processors",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "usage"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "xen-01.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "processor_type",
+              "operator": "=",
+              "value": "hr"
+            }
+          ]
+        },
+        {
+          "alias": "Hypervisor #2 Load (XEN-02)",
           "groupBy": [
             {
               "params": [
@@ -833,7 +1290,7 @@
             {
               "key": "hostname",
               "operator": "=",
-              "value": "xen-01.mfi.lab"
+              "value": "xen-02.mfi.lab"
             },
             {
               "condition": "AND",
@@ -848,7 +1305,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "CPU Load",
+      "title": "Server CPU Load",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -895,15 +1352,18 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 1,
       "fill": 3,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 20
+        "y": 27
       },
-      "id": 2,
+      "hiddenSeries": false,
+      "id": 22,
       "legend": {
         "alignAsTable": true,
         "avg": true,
@@ -918,6 +1378,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1085,6 +1548,210 @@
     },
     {
       "aliasColors": {
+        "Download Activity": "rgb(64, 138, 255)",
+        "Port In": "#1f78c1",
+        "Port Out": "#bf1b00",
+        "Upload Activity": "rgb(255, 63, 83)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "decimals": 1,
+      "fill": 3,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "alignAsTable": true,
+        "avg": true,
+        "current": true,
+        "max": true,
+        "min": true,
+        "show": true,
+        "total": false,
+        "values": true
+      },
+      "lines": true,
+      "linewidth": 2,
+      "links": [],
+      "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pointradius": 5,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Download Activity",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "ports",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/2|ethernet2\\/3\\/2)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": true,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "ifInOctets_rate"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  " *8"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "lab-core-01-6610.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "ifName",
+              "operator": "=",
+              "value": "ethernet2/3/1"
+            }
+          ]
+        },
+        {
+          "alias": "Upload Activity",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "ports",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/2|ethernet2\\/3\\/2)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": true,
+          "refId": "E",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "ifInOctets_rate"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  " *8"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [
+            {
+              "key": "hostname",
+              "operator": "=",
+              "value": "lab-core-01-6610.mfi.lab"
+            },
+            {
+              "condition": "AND",
+              "key": "ifName",
+              "operator": "=",
+              "value": "ethernet2/3/1"
+            }
+          ]
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "XEN-02 (Backup Server)",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "format": "bps",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
         "Download (From Valve)": "#e24d42",
         "Download Activity": "#ba43a9",
         "Port In": "#1f78c1",
@@ -1095,14 +1762,17 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 1,
       "fill": 3,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 41
       },
+      "hiddenSeries": false,
       "id": 16,
       "legend": {
         "alignAsTable": true,
@@ -1118,6 +1788,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1292,14 +1965,17 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 0,
       "fill": 3,
+      "fillGradient": 0,
       "gridPos": {
         "h": 8,
         "w": 24,
         "x": 0,
-        "y": 34
+        "y": 48
       },
+      "hiddenSeries": false,
       "id": 15,
       "legend": {
         "alignAsTable": true,
@@ -1315,6 +1991,9 @@
       "linewidth": 3,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1536,21 +2215,26 @@
     {
       "aliasColors": {
         "Download Activity": "rgb(97, 210, 65)",
+        "Download Activity (From Core)": "rgb(85, 222, 65)",
         "Port In": "#1f78c1",
         "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
+        "Upload Activity": "rgb(218, 20, 14)",
+        "Upload Activity (To Core)": "rgb(242, 34, 59)"
       },
       "bars": false,
       "dashLength": 10,
       "dashes": false,
+      "datasource": null,
       "decimals": 1,
       "fill": 3,
+      "fillGradient": 0,
       "gridPos": {
         "h": 7,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 56
       },
+      "hiddenSeries": false,
       "id": 17,
       "legend": {
         "alignAsTable": true,
@@ -1567,6 +2251,9 @@
       "linewidth": 2,
       "links": [],
       "nullPointMode": "connected",
+      "options": {
+        "dataLinks": []
+      },
       "percentage": false,
       "pointradius": 5,
       "points": false,
@@ -1577,7 +2264,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "Download Activity",
+          "alias": "Download Activity (From Core)",
           "groupBy": [
             {
               "params": [
@@ -1634,7 +2321,7 @@
           ]
         },
         {
-          "alias": "Upload Activity",
+          "alias": "Upload Activity (To Core)",
           "groupBy": [
             {
               "params": [
@@ -1695,1400 +2382,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "TABLE-01 Switch (ICX7250)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 49
-      },
-      "id": 18,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/4|ethernet2\\/3\\/4)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/4|ethernet2\\/3\\/4)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-02 Switch (ICX7250)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 56
-      },
-      "id": 19,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/5|ethernet2\\/3\\/5)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/5|ethernet2\\/3\\/5)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-03 Switch (ICX7250)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 63
-      },
-      "id": 20,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/6|ethernet2\\/3\\/6)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/3\\/6|ethernet2\\/3\\/6)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-04 Switch (ICX7250)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 70
-      },
-      "id": 21,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/2|ethernet2\\/2\\/2)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/2|ethernet2\\/2\\/2)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-05 Switch (ICX6450)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 77
-      },
-      "id": 22,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/3|ethernet2\\/2\\/3)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/3|ethernet2\\/2\\/3)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-06 Switch (ICX6450)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 84
-      },
-      "id": 23,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/4|ethernet2\\/2\\/4)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/4|ethernet2\\/2\\/4)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-07 Switch (ICX6450)",
-      "tooltip": {
-        "shared": true,
-        "sort": 0,
-        "value_type": "individual"
-      },
-      "type": "graph",
-      "xaxis": {
-        "buckets": null,
-        "mode": "time",
-        "name": null,
-        "show": true,
-        "values": []
-      },
-      "yaxes": [
-        {
-          "format": "bps",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": true
-        },
-        {
-          "format": "short",
-          "label": null,
-          "logBase": 1,
-          "max": null,
-          "min": null,
-          "show": false
-        }
-      ],
-      "yaxis": {
-        "align": false,
-        "alignLevel": null
-      }
-    },
-    {
-      "aliasColors": {
-        "Download Activity": "rgb(97, 210, 65)",
-        "Port In": "#1f78c1",
-        "Port Out": "#bf1b00",
-        "Upload Activity": "rgb(218, 20, 14)"
-      },
-      "bars": false,
-      "dashLength": 10,
-      "dashes": false,
-      "decimals": 1,
-      "fill": 3,
-      "gridPos": {
-        "h": 7,
-        "w": 24,
-        "x": 0,
-        "y": 91
-      },
-      "id": 24,
-      "legend": {
-        "alignAsTable": true,
-        "avg": true,
-        "current": true,
-        "max": true,
-        "min": true,
-        "show": true,
-        "sortDesc": true,
-        "total": false,
-        "values": true
-      },
-      "lines": true,
-      "linewidth": 2,
-      "links": [],
-      "nullPointMode": "connected",
-      "percentage": false,
-      "pointradius": 5,
-      "points": false,
-      "renderer": "flot",
-      "seriesOverrides": [],
-      "spaceLength": 10,
-      "stack": false,
-      "steppedLine": false,
-      "targets": [
-        {
-          "alias": "Download Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifOutOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/5|ethernet2\\/2\\/5)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "D",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        },
-        {
-          "alias": "Upload Activity",
-          "groupBy": [
-            {
-              "params": [
-                "$__interval"
-              ],
-              "type": "time"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
-            }
-          ],
-          "measurement": "ports",
-          "orderByTime": "ASC",
-          "policy": "default",
-          "query": "SELECT sum(\"ifInOctets_rate\") *8 AS \"total\" FROM  \"ports\" WHERE (\"hostname\" = 'lab-core-01-6610.mfi.lab' AND \"ifName\" =~ /(ethernet1\\/2\\/5|ethernet2\\/2\\/5)/) AND $timeFilter GROUP BY time($__interval) fill(null)",
-          "rawQuery": true,
-          "refId": "E",
-          "resultFormat": "time_series",
-          "select": [
-            [
-              {
-                "params": [
-                  "ifInOctets_rate"
-                ],
-                "type": "field"
-              },
-              {
-                "params": [],
-                "type": "last"
-              },
-              {
-                "params": [
-                  " *8"
-                ],
-                "type": "math"
-              }
-            ]
-          ],
-          "tags": [
-            {
-              "key": "hostname",
-              "operator": "=",
-              "value": "lab-core-01-6610.mfi.lab"
-            },
-            {
-              "condition": "AND",
-              "key": "ifName",
-              "operator": "=",
-              "value": "ethernet2/3/1"
-            }
-          ]
-        }
-      ],
-      "thresholds": [],
-      "timeFrom": null,
-      "timeRegions": [],
-      "timeShift": null,
-      "title": "TABLE-08 Switch (FCX)",
+      "title": "Central Wiring Closet Aggregation Chassis (FCX Stack)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -3127,7 +2421,7 @@
     }
   ],
   "refresh": "1m",
-  "schemaVersion": 18,
+  "schemaVersion": 21,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -3165,5 +2459,5 @@
   "timezone": "",
   "title": "reBOOT LAN",
   "uid": "q597Dw1ik",
-  "version": 68
+  "version": 95
 }
