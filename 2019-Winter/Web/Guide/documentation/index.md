@@ -16,25 +16,22 @@ All attendees and staff are free to park anywhere within the main campus outline
 ![parking 2](store/parking2.jpg)
 
 ## Food Options
-Outside food & drink are allowed. [Gaming 2 Give](https://www.gaming2give.org/) will also be selling concessions (food & drink) on-site, with all proceeds going to their charity.
+Outside food & drink are allowed. We will also have a table of concessions available for sale (water, Monster, assorted snacks) for exact cash only - no cards or change - please bring dollar bills. You are also welcome to bring your own food / snacks instead.
 
 [Fast Track Indy](https://www.fasttrackindy.com/), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available. To receive free delivery, use the discount code **REBOOTLAN** during checkout.
 
 ## Games & Updates!
-To avoid having to perform large downloads at the event, please do your best to have all the games you wish to play installed and updated prior to attending. Please ensure your Windows is up to date as well. Games you might want to have installed that were popular last year are Rocket League, CS:GO, HL2:DM, TF2, UT99, Unreal Tournament, etc.
+To avoid having to perform large downloads at the event, please do your best to have all the games you wish to play installed and updated prior to attending. Please ensure your Windows is up to date as well. Games you might want to have installed that were popular last year are Rocket League, CS:GO, Fortnite, HL2:DM, TF2, UT99, etc.
 
 
 ## Setting up - Network & Power
-Being a LAN party, each attendee is expected to bring their own PC or console setup including monitors/TVs. Please bring an ethernet cable and a power strip as well. Each attendee gets their own cubicle - power outlets and a network jack is available under each cubicle for your use. Multiple monitors are welcome.  
+Being a LAN party, each attendee is expected to bring their own PC or console setup including monitors/TVs. Please bring an ethernet cable and a power strip as well. Each attendee gets their own cubicle - power outlets and a network jack are available under each cubicle for your gear. Multiple monitors are welcome.  
 
 If you have special requirements, such as wanting a 10gbE connection, or bringing a server, just find a staff member and they will get you set up.  
 
 
 ## Seating
-Tables +  chairs will be provided. However if you want to bring your own chair you like more, feel free!
-
-## Sleeping
-If you need to sleep or take a nap, there will be a separate room to lay out sleeping bags and pillows and get some rest. 
+Tables +  chairs will be provided. The chairs are pretty good office chairs. However if you want to bring your own chair you like more, feel free!
 
 ## Windows 10 File Sharing
 
