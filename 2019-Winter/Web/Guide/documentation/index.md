@@ -18,7 +18,7 @@ All attendees and staff are free to park anywhere within the main campus outline
 ## Food Options
 Outside food & drink are allowed. We will also have a table of concessions available for sale (water, Monster, assorted snacks) for exact cash only - no cards or change - please bring dollar bills. You are also welcome to bring your own food / snacks instead.
 
-[Fast Track Indy](https://www.fasttrackindy.com/), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available. To receive free delivery, use the discount code **REBOOTLAN** during checkout.
+[Fast Track Indy](https://www.fasttrackindy.com/rebootlan), an Indianapolis bicycle delivery service is offering free delivery (tip not included) to all LAN event attendees. Check out their website to see all available restaurants, there are some great local options available. To receive free delivery, use the discount code **REBOOT** during checkout [here!](https://www.fasttrackindy.com/rebootlan).
 
 ## Games & Updates!
 To avoid having to perform large downloads at the event, please do your best to have all the games you wish to play installed and updated prior to attending. Please ensure your Windows is up to date as well. Games you might want to have installed that were popular last year are Rocket League, CS:GO, Fortnite, HL2:DM, TF2, UT99, etc.
